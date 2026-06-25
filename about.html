@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Selvanayaki Groups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* =========================================
+           GLOBAL STYLES & RESET
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================================
+           NAVIGATION BAR
+           ========================================= */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(219, 234, 254, 0.5);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 60px;
+        }
+
+        .logo-section h1 {
+            color: #2563eb;
+            font-size: 24px;
+        }
+
+        .logo-section p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            color: #1e293b;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: #2563eb;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 240px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            z-index: 2000;
+            padding: 10px 0;
+            border: 1px solid rgba(219, 234, 254, 0.8);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #1e293b;
+            padding: 12px 24px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eff6ff;
+            color: #2563eb;
+            padding-left: 30px;
+        }
+
+        /* =========================================
+           PREMIUM ABOUT PAGE STYLES
+           ========================================= */
+        .page-header-premium {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image_0a9e65.jpg') center/cover;
+            padding: 120px 20px 80px 20px;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .page-header-premium h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .page-header-premium p {
+            font-size: 1.2rem;
+            color: #dbeafe;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-premium-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .about-premium-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .image-collage {
+            position: relative;
+            padding-right: 40px;
+            padding-bottom: 40px;
+        }
+
+        .img-main {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+            object-fit: cover;
+            min-height: 450px;
+        }
+
+        .img-accent {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 55%;
+            border-radius: 20px;
+            border: 12px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .text-content-premium h4 {
+            color: #2563eb;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #eff6ff;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        .text-content-premium h2 {
+            font-size: 2.8rem;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .text-content-premium h2 span {
+            color: #2563eb;
+        }
+
+        .text-content-premium p {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .premium-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .premium-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .premium-list i {
+            color: #25d366;
+            background: #dcfce7;
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        /* --- Vision & Mission --- */
+        .vision-mission-premium {
+            background-color: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .vm-premium-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .vm-card-modern {
+            padding: 60px 50px;
+            border-radius: 30px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vm-card-modern:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-dark {
+            background: #0f172a;
+            color: #f8fafc;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+        }
+
+        .card-dark .vm-icon-modern {
+            background: rgba(255, 255, 255, 0.08);
+            color: #60a5fa;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-dark h3 {
+            color: #ffffff;
+        }
+
+        .card-dark p {
+            color: #94a3b8;
+        }
+
+        .card-light {
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-light .vm-icon-modern {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .card-light h3 {
+            color: #0f172a;
+        }
+
+        .card-light p {
+            color: #475569;
+        }
+
+        .vm-icon-modern {
+            width: 80px;
+            height: 80px;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .vm-card-modern h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .vm-card-modern p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        /* --- Achievements --- */
+        .achievements-section {
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        .achievements-wrapper {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 60px 0;
+            width: 100%;
+        }
+
+        .achievements-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .achievement-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 1px solid #1e5fc2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .icon-circle::before {
+            content: '';
+            width: 65px;
+            height: 65px;
+            background-color: #1e5fc2;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .icon-circle i {
+            color: white;
+            font-size: 26px;
+            z-index: 2;
+        }
+
+        .counter-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .achievement-item p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* =========================================
+           DARK FOOTER
+           ========================================= */
+        .dark-footer {
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+            padding: 70px 0 30px 0;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col {
+            text-align: left;
+        }
+
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #a3a3a3;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+
+        .footer-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .footer-logo {
+            width: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .footer-logo-section h2 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .links-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-col p {
+            margin-bottom: 8px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-4px);
+            color: #ffffff;
+        }
+
+        .social-icons .facebook {
+            background-color: #1877f2;
+        }
+
+        .social-icons .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-icons .whatsapp {
+            background-color: #25d366;
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid #333333;
+            margin: 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+            text-align: left;
+        }
+
+        .footer-bottom p {
+            color: #737373;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-legal a {
+            color: #737373;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            color: #ffffff;
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVE RULES (Max 900px)
+           ========================================= */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: #2563eb;
+            cursor: pointer;
+            min-width: 28px;
+            min-height: 28px;
+            line-height: 1;
+        }
+
+        /* =========================================
+           TABLET RESPONSIVE RULES (901px - 1024px)
+           ========================================= */
+        @media (max-width: 1024px) {
+            .container {
+                width: 92%;
+            }
+
+            .page-header-premium h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-premium-grid {
+                gap: 40px;
+            }
+
+            .text-content-premium h2 {
+                font-size: 2.3rem;
+            }
+
+            .vm-premium-grid {
+                gap: 20px;
+            }
+
+            .vm-card-modern {
+                padding: 45px 35px;
+            }
+
+            .milestones-grid {
+                gap: 25px;
+            }
+
+            .milestone-center-img img {
+                max-width: 190px;
+            }
+
+            .business-grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border: none;
+                padding-left: 15px;
+                min-width: 100%;
+            }
+
+            .page-header-premium {
+                padding: 110px 20px 60px 20px;
+                margin-top: 0;
+            }
+
+            .page-header-premium h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header-premium p {
+                font-size: 1rem;
+            }
+
+            .about-premium-section {
+                padding: 60px 0;
+            }
+
+            .about-premium-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .image-collage {
+                padding: 0;
+            }
+
+            .img-accent {
+                display: none;
+            }
+
+            .img-main {
+                min-height: 280px;
+            }
+
+            .text-content-premium h2 {
+                font-size: 2.2rem;
+            }
+
+            .premium-list {
+                grid-template-columns: 1fr;
+            }
+
+            .businesses-section {
+                padding: 60px 0;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-mission-premium {
+                padding: 60px 0;
+            }
+
+            .vm-premium-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .vm-card-modern {
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+
+            .vm-card-modern h3 {
+                font-size: 1.8rem;
+            }
+
+            .milestones-section {
+                padding: 60px 0;
+            }
+
+            .milestones-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: left;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .footer-logo-section,
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* =========================================
+           SMALL PHONE RESPONSIVE RULES (Max 480px)
+           ========================================= */
+        @media (max-width: 480px) {
+            .container {
+                width: 94%;
+            }
+
+            .logo {
+                width: 55px;
+            }
+
+            .logo-section h1 {
+                font-size: 18px;
+            }
+
+            .logo-section p {
+                font-size: 11px;
+            }
+
+            .page-header-premium {
+                padding: 100px 15px 45px 15px;
+            }
+
+            .page-header-premium h1 {
+                font-size: 1.7rem;
+            }
+
+            .page-header-premium p {
+                font-size: 0.9rem;
+            }
+
+            .text-content-premium h2 {
+                font-size: 1.7rem;
+            }
+
+            .text-content-premium h4 {
+                font-size: 0.8rem;
+            }
+
+            .vm-card-modern {
+                padding: 30px 22px;
+            }
+
+            .vm-card-modern h3 {
+                font-size: 1.5rem;
+            }
+
+            .vm-icon-modern {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                border-radius: 18px;
+            }
+
+            .milestones-section h2 {
+                font-size: 1.7rem;
+            }
+
+            .milestone-header h3 {
+                font-size: 1.4rem;
+            }
+
+            .milestone-header i {
+                font-size: 1.5rem;
+            }
+
+            .milestone-center-img img {
+                max-width: 150px;
+            }
+
+            .business-card {
+                padding: 25px 20px;
+            }
+
+            .icon-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .icon-circle::before {
+                width: 50px;
+                height: 50px;
+            }
+
+            .icon-circle i {
+                font-size: 20px;
+            }
+
+            .counter-box {
+                font-size: 1.8rem;
+            }
+
+            .achievement-item p {
+                font-size: 0.95rem;
+            }
+
+            .footer-logo {
+                width: 50px;
+            }
+
+            .footer-logo-section h2 {
+                font-size: 1.15rem;
+            }
+        }
+
+        /* =========================================
+           MILESTONES SECTION STYLES
+           ========================================= */
+        .milestones-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+
+        .section-title-pill {
+            color: #2563eb;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #eff6ff;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        .milestones-section h2 {
+            font-size: 2.8rem;
+            color: #1e293b;
+        }
+
+        .milestones-section h2 span {
+            color: #2563eb;
+        }
+
+        .milestones-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .milestone-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .milestone-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .milestone-item:last-child {
+            border-bottom: none;
+        }
+
+        .milestone-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .milestone-header i {
+            font-size: 2rem;
+            color: #3b82f6;
+            /* Blue icon to match your theme */
+        }
+
+        .milestone-header h3 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            font-weight: 800;
+        }
+
+        .milestone-item p {
+            color: #475569;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .right-align .milestone-header {
+            justify-content: flex-end;
+        }
+
+        .milestone-center-img {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+        }
+
+        .milestone-center-img img {
+            width: 100%;
+            max-width: 250px;
+            /* Adjust based on your image size */
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+            /* Adds the soft shadow from your screenshot */
+        }
+
+        /* Mobile Responsiveness for Milestones */
+        @media (max-width: 900px) {
+            .milestones-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .milestone-center-img {
+                order: -1;
+                /* Puts the image at the top on mobile */
+                margin-bottom: 20px;
+            }
+
+            .right-align {
+                text-align: left;
+            }
+
+            .right-align .milestone-header {
+                justify-content: flex-start;
+                flex-direction: row-reverse;
+                /* Keeps Icon on left, Year on Right for mobile consistency */
+            }
+        }
+
+        /* =========================================
+   BUSINESS NETWORK CARDS
+   ========================================= */
+        .businesses-section {
+            background-color: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Entrance Animation for the Cards */
+        @keyframes slideUpEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .business-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+            /* Removes the underline from the link */
+            color: #1e293b;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+
+            /* Slide in when page opens */
+            animation: slideUpEntrance 0.8s ease-out forwards;
+            opacity: 0;
+            /* Keeps them hidden before the animation fires */
+
+            /* Uses the inline style from HTML to stagger the entrance */
+            animation-delay: var(--delay);
+        }
+
+        /* Hover effect when user mouses over the card */
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            border-color: #bfdbfe;
+        }
+
+        .business-logo-wrapper {
+            width: 80px;
+            height: 80px;
+            background: #eff6ff;
+            border-radius: 20px;
+            /* Squircle shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            box-shadow: inset 0 2px 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .business-logo-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .business-info {
+            flex-grow: 1;
+            /* Pushes the arrow to the bottom */
+            width: 100%;
+        }
+
+        .business-info h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .business-info p {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Icons next to the text */
+        .business-info i {
+            color: #2563eb;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            background: #eff6ff;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        /* The interactive arrow button at the bottom right */
+        .business-arrow {
+            margin-top: 25px;
+            width: 45px;
+            height: 45px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            transition: all 0.3s ease;
+            align-self: flex-end;
+            /* Aligns to the right */
+            font-size: 1.2rem;
+        }
+
+        /* Animate the arrow when hovering over the card */
+        .business-card:hover .business-arrow {
+            background: #2563eb;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index" class="logo-section">
+                <img src="logo.png" alt="Logo" class="logo">
+                <div>
+                    <h1>Selvanayaki Groups</h1>
+                    <p>Authorized Dealer & Service Center</p>
+                </div>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav id="nav-menu">
+                <a href="index">Home</a>
+                <a href="about" style="color: #2563eb;">About</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="ksb-pumps">KSB Pumps</a>
+                        <a href="kirloskar-pumps">Kirloskar Pumps</a>
+                        <a href="tufropes">Tufropes</a>
+                        <a href="bharat-bijlee">Bharat Bijlee</a>
+                        <a href="turebore">Turebore</a>
+                    </div>
+                </div>
+
+                <a href="gallery">Gallery</a>
+                <a href="index#services">Services</a>
+                <a href="index#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header-premium">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Driving industrial excellence through genuine products, technical expertise, and unparalleled service.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-premium-section">
+        <div class="container about-premium-grid">
+
+            <div class="image-collage">
+                <img src="image_0a9e65.jpg" alt="Industrial Pumps" class="img-main">
+                <img src="pump-banner.png" alt="Service Center" class="img-accent">
+            </div>
+
+            <div class="text-content-premium">
+                <h4>Who We Are</h4>
+                <h2>Decades of Trust & <span>Excellence</span></h2>
+
+                <p>Trusted Partner for Pumps, Motors, Industrial Ropes & Piping Solutions Sinces 1996, Selvanayaki
+                    Groups has been a reliable name in the industrial sector, providing top-quality products and
+                    services to meet the diverse needs of our clients.</p>
+
+                <p>Located in the heart of Siddhapudur, Coimbatore, <strong>Selvanayaki Electricals</strong> has
+                    established itself as the region's premier destination for high-quality industrial and agricultural
+                    equipment.</p>
+
+                <p>We don't just sell products; we engineer solutions. As an authorized dealer and certified service
+                    center for industry giants like KSB, Kirloskar, Bharat Bijlee, Tufropes and Turebore, we ensure that
+                    your operations
+                    run seamlessly with zero downtime.</p>
+
+                <ul class="premium-list">
+                    <li><i class="fa-solid fa-check"></i> 100% Genuine Spares</li>
+                    <li><i class="fa-solid fa-check"></i> Authorized Service Center</li>
+                    <li><i class="fa-solid fa-check"></i> On-Site Troubleshooting</li>
+                    <li><i class="fa-solid fa-check"></i> Expert Technicians</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="businesses-section section">
+        <div class="container">
+            <div class="center">
+                <h4 class="section-title-pill">Our Network</h4>
+                <h2>Explore Our <span>Businesses</span></h2>
+            </div>
+
+            <div class="business-grid">
+
+                <a href="ksb-service" class="business-card" style="--delay: 0.1s;">
+                    <div class="business-logo-wrapper">
+                        <img src="logo11.png" alt="Selvanayaki Electricals">
+                    </div>
+                    <div class="business-info">
+                        <h3>Selvanayaki Electricals</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Siddhapudur, Coimbatore - 641044</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 98422 63303</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@selvanayaki.com</p>
+                    </div>
+                    <div class="business-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="ksb-pumps" class="business-card" style="--delay: 0.5s;">
+                    <div class="business-logo-wrapper">
+                        <img src="logo11.png" alt="Business 3">
+                    </div>
+                    <div class="business-info">
+                        <h3>Selvanayaki Traders</h3>
+                        <p><i class="fa-solid fa-location-dot"></i>Siddhapudur, Coimbatore - 641044 </p>
+                        <p><i class="fa-solid fa-phone"></i> +91 99887 76655</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@selvanayaki.com</p>
+                    </div>
+                    <div class="business-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="kirloskar-pumps" class="business-card" style="--delay: 0.3s;">
+                    <div class="business-logo-wrapper">
+                        <img src="logo12.png" alt="Business 2">
+                    </div>
+                    <div class="business-info">
+                        <h3>Sabari pumps and systems</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Main Road, Dharapuram</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fa-solid fa-globe"></i> Visit Website</p>
+                    </div>
+                    <div class="business-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="sabari" class="business-card" style="--delay: 0.5s;">
+                    <div class="business-logo-wrapper">
+                        <img src="logo13.png" alt="Business 3">
+                    </div>
+                    <div class="business-info">
+                        <h3>Bharat pumps and systems</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Industrial Estate, Pollachi</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 99887 76655</p>
+                        <p><i class="fa-solid fa-envelope"></i> pollachi@selvanayaki.com</p>
+                    </div>
+                    <div class="business-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-mission-premium">
+        <div class="container">
+            <div class="vm-premium-grid">
+
+                <div class="vm-card-modern card-dark">
+                    <div class="vm-icon-modern">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted and preferred partner for industrial and electrical solutions in Tamil
+                        Nadu, recognized for our unwavering commitment to quality, genuine products, and customer-first
+                        service.</p>
+                </div>
+
+                <div class="vm-card-modern card-light">
+                    <div class="vm-icon-modern">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To consistently provide our customers with top-tier industrial equipment and reliable after-sales
+                        support. We strive to solve complex mechanical challenges with technical expertise and fast
+                        turnaround times.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="milestones-section">
+        <div class="container">
+            <div class="center" style="text-align: center; margin-bottom: 50px;">
+                <h4 class="section-title-pill">Timeline</h4>
+                <h2>Our <span>Milestones</span></h2>
+            </div>
+
+            <div class="milestones-grid">
+                <div class="milestone-col left-col">
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>1996</h3>
+                        </div>
+                        <p>KSB Pumps (Authorized Service Center)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2006</h3>
+                        </div>
+                        <p>KSB Pumps (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2019</h3>
+                        </div>
+                        <p>Turebore (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2020</h3>
+                        </div>
+                        <p>Tufropes (Authorized Distributor)</p>
+                    </div>
+                </div>
+
+                <div class="milestone-center-img">
+                    <img src="logo.png" alt="Submersible Pumps Timeline" />
+                </div>
+
+                <div class="milestone-col right-col">
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2021</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>New branch in pollachi</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2022</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>New branch in Dharapuram</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2023</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>Bharat Bijlee (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2026</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>Kirloskar Pumps (Authorized Distributor)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="achievements-section" style="padding-top: 0;">
+        <div class="achievements-wrapper">
+            <div class="container achievements-grid">
+                <div class="achievement-item">
+                    <div class="icon-circle"><i class="fa-solid fa-thumbs-up"></i></div>
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="30">0</h3><span>+</span>
+                    </div>
+                    <p>Years of experience</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon-circle"><i class="fa-solid fa-right-to-bracket"></i></div>
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="500">0</h3><span>K</span>
+                    </div>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon-circle"><i class="fa-regular fa-star"></i></div>
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="200">0</h3><span>+</span>
+                    </div>
+                    <p>No of Products</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+                    <div class="counter-box">
+                        <h3 class="counter" data-target="100">0</h3><span>%</span>
+                    </div>
+                    <p>Customer Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container footer-top">
+
+            <div class="footer-col brand-col">
+                <a href="index" class="footer-logo-section">
+                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <div>
+                        <h2>Selvanayaki<br>Groups</h2>
+                    </div>
+                </a>
+                <p>Elevating global standards with professional care and technical precision. Your trusted advisor for
+                    industrial pumps and motors.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="index#services">Services</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Contact</h3>
+                <p>+91 98422 63303</p>
+                <p>selvanayakiksb@gmail.com</p>
+                <p>Siddhapudur, Coimbatore 641044</p>
+            </div>
+
+            <div class="footer-col social-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/61577812341971" target="_blank" class="facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/selvanayakigroups/" target="_blank" class="instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919842263303" target="_blank" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <hr class="footer-divider">
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Selvanayaki Groups. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Number Counter Animation
+            const counters = document.querySelectorAll('.counter');
+            const speed = 100;
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const increment = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+
+            const observerOptions = { root: null, threshold: 0.5 };
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const achievementsSection = document.querySelector('.achievements-wrapper');
+            if (achievementsSection) {
+                counterObserver.observe(achievementsSection);
+            }
+
+            // Mobile Menu Logic
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icon = mobileMenu.querySelector('i');
+                    if (icon) {
+                        if (navMenu.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-xmark');
+                        } else {
+                            icon.classList.remove('fa-xmark');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

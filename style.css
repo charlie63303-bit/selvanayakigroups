@@ -1,0 +1,1367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(219, 234, 254, 0.5);
+  z-index: 1000;
+}
+
+.nav-container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 75px;
+}
+
+.logo-section h1 {
+  color: #2563eb;
+  font-size: 24px;
+}
+
+.logo-section p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+.dropdown:hover .dropbtn {
+  color: #2563eb;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 2000;
+  padding: 10px 0;
+  border: 1px solid rgba(219, 234, 254, 0.8);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a,
+.sub-dropdown-content a {
+  color: #1e293b;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.dropdown-content a:hover,
+.sub-dropdown-content a:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding-left: 30px;
+}
+
+/* =========================================
+   HERO SECTIONS
+   ========================================= */
+.main-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url('image_0a9e65.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-text-container {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+/* Typing Effect (Live Letter) */
+.typing-text {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 70;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  border-right: 4px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(26, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #ffffff;
+  }
+}
+
+.hero-new {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+  min-height: 80vh;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-content-new {
+  flex: 1;
+}
+
+.hero-content-new h4 {
+  color: #003c8f;
+  margin-bottom: 10px;
+}
+
+.hero-content-new h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero-content-new p {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #0b63ce;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* =========================================
+   BRANDS SECTION
+   ========================================= */
+.brands-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.brands-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* =========================================
+   WHY CHOOSE US & ACHIEVEMENTS
+   ========================================= */
+.why-choose-us {
+  background-color: #ffffff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.why-card {
+  background: #eff6ff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #dbeafe;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.1);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.why-card h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.why-card p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.achievements-section {
+  text-align: center;
+  padding: 60px 0 0 0;
+}
+
+.achievements-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.achievements-wrapper {
+  background-color: #cfd4d9;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.achievements-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #1e5fc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: transparent;
+}
+
+.icon-circle::before {
+  content: '';
+  width: 65px;
+  height: 65px;
+  background-color: #1e5fc2;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.icon-circle i {
+  color: white;
+  font-size: 26px;
+  z-index: 2;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.achievement-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* =========================================
+   SERVICES & BRANCHES
+   ========================================= */
+.service-grid,
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.branch-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.service-card,
+.branch-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #dbeafe;
+}
+
+.branch-card {
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3,
+.branch-card h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.branch-card p {
+  color: #64748b;
+}
+
+.branches {
+  background: #eff6ff;
+}
+
+/* =========================================
+   CONTACT & WHATSAPP
+   ========================================= */
+.contact {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.whatsapp-box {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.whatsapp-box h3 {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.whatsapp-box p {
+  color: #475569;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 18px 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   NEW DARK FOOTER (LEFT ALIGNED)
+   ========================================= */
+.dark-footer {
+  background-color: #1a1a1a;
+  color: #e5e7eb;
+  padding: 70px 0 30px 0;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col {
+  text-align: left;
+  /* Forces left alignment */
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-decoration: none;
+  margin-bottom: 12px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.footer-logo {
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.footer-logo-section h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.links-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-col p {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  color: #ffffff;
+}
+
+.social-icons .facebook {
+  background-color: #1877f2;
+}
+
+.social-icons .instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icons .whatsapp {
+  background-color: #25d366;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #333333;
+  margin: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  text-align: left;
+}
+
+.footer-bottom p {
+  color: #737373;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-legal a {
+  color: #737373;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   TABLET RESPONSIVE RULES (901px - 1024px)
+   Smooths the jump between desktop and the
+   mobile-menu breakpoint below.
+   ========================================= */
+@media (max-width: 1024px) {
+  .hero-new {
+    padding: 50px 5%;
+    gap: 25px;
+  }
+
+  .hero-content-new h1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .about-premium-grid,
+  .vm-premium-grid {
+    gap: 40px;
+  }
+
+  .text-content-premium h2 {
+    font-size: 2.3rem;
+  }
+
+  .milestones-grid {
+    gap: 25px;
+  }
+
+  .milestone-center-img img {
+    max-width: 190px;
+  }
+}
+
+/* =========================================
+   OPTIMIZED MOBILE RESPONSIVE RULES (Max 900px)
+   ========================================= */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #2563eb;
+  cursor: pointer;
+  min-width: 28px;
+  min-height: 28px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .center {
+    margin-bottom: 30px;
+  }
+
+  /* Navbar & Mobile Menu */
+  .nav-container {
+    flex-direction: row;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .dropdown-content,
+  .sub-dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding-left: 15px;
+    min-width: 100%;
+  }
+
+  /* Grids */
+  .hero-grid,
+  .about-grid,
+  .product-grid,
+  .service-grid,
+  .contact-grid,
+  .gallery-grid,
+  .branch-grid,
+  .why-grid,
+  .vm-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* achievements-grid uses flexbox, not grid, so it needs its own rule */
+  .achievements-grid {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .achievements-title {
+    font-size: 1.6rem;
+  }
+
+  /* Hero Adjustments */
+  .hero-content-new h1 {
+    font-size: 2rem;
+  }
+
+  .main-hero {
+    height: 50vh;
+  }
+
+  .hero-new {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .typing-text {
+    font-size: 1.8rem;
+    white-space: normal;
+    border-right: none;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  /* Section spacing & headings */
+  .brands-title {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-box {
+    padding: 35px 25px;
+  }
+
+  .whatsapp-box h3 {
+    font-size: 24px;
+  }
+
+  .why-card,
+  .service-card,
+  .vm-card-modern {
+    padding: 30px 25px;
+  }
+
+  /* Dark Footer Mobile Updates (Left Aligned) */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer-logo-section {
+    justify-content: flex-start;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================
+   SMALL PHONE RESPONSIVE RULES (Max 480px)
+   ========================================= */
+@media (max-width: 480px) {
+
+  .container {
+    width: 94%;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .logo {
+    width: 55px;
+  }
+
+  .logo-section h1 {
+    font-size: 18px;
+  }
+
+  .logo-section p {
+    font-size: 11px;
+  }
+
+  .hero-content-new h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+
+  .typing-text {
+    font-size: 1.3rem;
+  }
+
+  .main-hero {
+    height: 45vh;
+  }
+
+  .brands-title {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card-logo {
+    max-width: 90px;
+  }
+
+  .why-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+
+  .why-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-circle::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-circle i {
+    font-size: 20px;
+  }
+
+  .counter-box {
+    font-size: 1.8rem;
+  }
+
+  .achievement-item p {
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-box {
+    padding: 28px 18px;
+  }
+
+  .whatsapp-btn {
+    padding: 14px 22px;
+    font-size: 15px;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+
+  .footer-logo-section h2 {
+    font-size: 1.15rem;
+  }
+
+  .footer-bottom {
+    text-align: left;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================
+           LIVE SLIDING BACKGROUND ANIMATION
+           ========================================= */
+@keyframes liveSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================================
+   OUR CLIENTS SLIDER SECTION
+   ========================================= */
+.clients-section {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.clients-slider {
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* Optional: Faded white gradients on the left and right edges for a clean look */
+.clients-slider::before,
+.clients-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.clients-slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* Critical for the infinite loop calculation */
+  animation: scrollClients 30s linear infinite;
+}
+
+/* Pause the slider when a user hovers over it */
+.clients-slider:hover .clients-track {
+  animation-play-state: paused;
+}
+
+.client-slide {
+  width: 250px;
+  /* Fixed width box for each logo */
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-slide img {
+  max-width: 100%;
+  max-height: 80px;
+  /* Keeps tall logos from breaking the layout */
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+/* Premium effect: logos highlight when hovered */
+.client-slide img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Animation for the infinite loop */
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    /* Shifts exactly half the width of the track to restart the seamless loop */
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+  .client-slide {
+    width: 180px;
+    padding: 0 20px;
+  }
+
+  .client-slide img {
+    max-height: 60px;
+  }
+
+  .clients-slider::before,
+  .clients-slider::after {
+    width: 60px;
+  }
+}
+
+/* =========================================
+   PRODUCT CATALOG PAGE HEADER
+   (Used by ksb-pumps, kirloskar-pumps, tufropes,
+   bharat-bijlee, turebore pages)
+   ========================================= */
+.page-header {
+  padding: 140px 20px 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.page-header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header-logo {
+  width: 100px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .page-header {
+    padding: 120px 20px 60px 20px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-header p {
+    font-size: 1.05rem;
+  }
+
+  .page-header-logo {
+    width: 80px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 110px 15px 45px 15px;
+  }
+
+  .page-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .page-header p {
+    font-size: 0.95rem;
+  }
+
+  .page-header-logo {
+    width: 65px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .catalog-img {
+    height: 180px;
+  }
+
+  .catalog-content {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   PRODUCT CATALOG GRID & CARDS
+   (Used by ksb-pumps, kirloskar-pumps, tufropes,
+   bharat-bijlee, turebore pages)
+   ========================================= */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.catalog-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-5px);
+}
+
+.catalog-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid #2563eb;
+}
+
+.catalog-content {
+  padding: 25px;
+}
+
+.catalog-content h3 {
+  color: #1e293b;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.catalog-content .primary-use {
+  color: #2563eb;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  background: #eff6ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.catalog-content p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .catalog-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================================
+   GALLERY PAGE STYLES
+   ========================================= */
+.gallery-page {
+  /* Adds extra padding at the top so the navbar doesn't cover the title */
+  padding-top: 130px;
+}
+
+.gallery-grid {
+  display: grid;
+  /* Automatically fits as many 300px columns as possible. 
+     This handles desktop, tablet, and large phones automatically! */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  /* Forces all images into a uniform shape (4:3 ratio) so the grid looks perfect */
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image fills the box without stretching */
+  transition: transform 0.5s ease;
+}
+
+/* Premium Zoom Effect on Hover */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Mobile Specific Tweaks for Gallery */
+@media (max-width: 600px) {
+  .gallery-page {
+    padding-top: 100px;
+  }
+
+  .gallery-grid {
+    /* Changes to a 2-column grid on smaller mobile screens */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1 / 1;
+    /* Makes them square on mobile for better fit */
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSB Authorized Service Center - Selvanayaki Electricals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Specific adjustments for the service center page layout */
+        .service-hero {
+            padding-top: 140px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2563eb;
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .service-feature-card {
+            padding: 30px;
+            text-align: left;
+        }
+
+        .service-feature-card i {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .status-banner {
+            background: #1e293b;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .status-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .status-item h3 {
+            color: #3b82f6;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index" class="logo-section">
+                <img src="logo.png" alt="Logo" class="logo">
+                <div>
+                    <h1>Selvanayaki Electricals</h1>
+                    <p>Authorized Dealer & Service Center</p>
+                </div>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav id="nav-menu">
+                <a href="index">Home</a>
+                <a href="about">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="ksb-pumps">KSB Pumps</a>
+                        <a href="kirloskar-pumps">Kirloskar Pumps</a>
+                        <a href="tufropes">Tufropes</a>
+                        <a href="bharat-bijlee">Bharat Bijlee</a>
+                        <a href="turebore">Turebore Pipes</a>
+                    </div>
+                </div>
+                <a href="gallery">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section service-hero">
+        <div class="container">
+            <span class="badge"><i class="fa-solid fa-circle-check"></i> KSB Certified Service Center</span>
+            <h2>Selvanayaki Electricals</h2>
+            <p style="max-width: 700px; margin: 15px auto 0 auto; color: #475569;">
+                Equipped with state-of-the-art diagnostic machinery, factory-trained engineers, and 100% genuine KSB
+                spare parts to ensure maximum lifecycle performance for your pumping systems.
+            </p>
+        </div>
+    </section>
+
+    <div class="status-banner">
+        <div class="container status-container">
+            <div class="status-item">
+                <h3>100%</h3>
+                <p>Genuine KSB Spares</p>
+            </div>
+            <div class="status-item">
+                <h3>Fully</h3>
+                <p>Certified Technicians</p>
+            </div>
+            <div class="status-item">
+                <h3>Advanced</h3>
+                <p>Testing Facilities</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <span class="section-title">Our Capabilities</span>
+                <h3>Comprehensive Maintenance & Repair</h3>
+            </div>
+
+            <div class="service-grid">
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-tools"></i>
+                    <h3>Complete Pump Repair</h3>
+                    <p>Dismantling, cleaning, chemical treatment, clearance checking, and total restoration of
+                        submersible, monoblock, and industrial pumps.</p>
+                </div>
+
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Precision Motor Rewinding</h3>
+                    <p>Using premium grade copper winding wires and specialized insulation materials that match precise
+                        OEM factory configurations.</p>
+                </div>
+
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>Dynamic Balancing & Alignment</h3>
+                    <p>Minimizes operational vibrations and bearing wear by balancing impellers and rotors with
+                        specialized high-tech computerized instruments.</p>
+                </div>
+
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Hydro Testing & Quality Checks</h3>
+                    <p>Every serviced pump passes strict pressure testing and performance curve evaluations before final
+                        sign-off and dispatch.</p>
+                </div>
+
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-truck-pickup"></i>
+                    <h3>On-site Maintenance Support</h3>
+                    <p>Field break-down assistance and installation guidance directly at your industrial, agricultural,
+                        or commercial locations.</p>
+                </div>
+
+                <div class="card service-feature-card">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <h3>OEM Components Supply</h3>
+                    <p>Direct availability of genuine KSB mechanical seals, bearings, carbon bushes, impellers, and
+                        O-ring kits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="container contact-grid">
+            <div>
+                <span class="section-title" style="color: #93c5fd;">Book a Repair</span>
+                <h3 style="color: white; margin-bottom: 20px;">Need Quick Service or Technical Support?</h3>
+                <p style="color: #bfdbfe; margin-bottom: 30px;">
+                    Bring your equipment directly to our service location in Coimbatore or contact our support line to
+                    schedule an expert technical evaluation.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Siddhapudur, Coimbatore,
+                        Tamil Nadu - 641044</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +91 98422 63303</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> selvanayakiksb@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="whatsapp-box">
+                <i class="fa-brands fa-whatsapp"
+                    style="font-size: 3.5rem; color: #25d366; margin-bottom: 15px; display: block;"></i>
+                <h3>Instant Booking via WhatsApp</h3>
+                <p style="color: #64748b; margin-bottom: 25px; margin-top: 10px;">
+                    Send us your pump model or error details directly to our technical desk for an immediate response.
+                </p>
+                <a href="https://wa.me/919842263303?text=Hi,%20I%20need%20authorized%20service%20support%20for%20a%20KSB%20pump."
+                    target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Chat With Service Desk
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="index" class="footer-logo-section">
+                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <div>
+                        <h3 style="margin-bottom: 0;">Selvanayaki Groups</h3>
+                        <p style="font-size: 0.8rem; color: #a3a3a3;">Authorized Dealer & Service Center</p>
+                    </div>
+                </a>
+                <p>Trusted industrial and agricultural engineering partner providing premium pumps, motors, and
+                    transmission products across Tamil Nadu.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/61577812341971" target="_blank" class="facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/selvanayakigroups/" target="_blank" class="instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919842263303" target="_blank" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Contact</h3>
+                <p>+91 98422 63303</p>
+                <p>selvanayakiksb@gmail.com</p>
+                <p>Siddhapudur, Coimbatore 641044</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <hr class="footer-divider">
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Selvanayaki Groups. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
