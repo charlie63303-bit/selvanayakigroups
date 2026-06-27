@@ -1365,3 +1365,411 @@ nav a:hover {
     border-radius: 10px;
   }
 }
+
+/* =========================================
+   MODERN SERVICES GRID 
+   ========================================= */
+.services-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card-modern {
+  background-color: #f8f9fa;
+  /* Light grey background */
+  border-radius: 12px;
+  padding: 45px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-modern.highlighted h3,
+.service-card-modern.highlighted p {
+  color: #ffffff;
+}
+
+/* Circular White Icon Wrapper */
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Maroon Red Icon Color */
+.icon-wrapper i {
+  font-size: 32px;
+  color: #2563eb;
+  /* Exact maroon red from your screenshot */
+}
+
+/* Text Styling inside Cards */
+.service-card-modern h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.service-card-modern p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+  .services-grid-modern {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-modern {
+    padding: 35px 20px;
+  }
+}
+
+/* =========================================
+   BUSINESS NETWORK CARDS
+   ========================================= */
+.businesses-section {
+  background-color: #f8fafc;
+  padding: 100px 0;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Entrance Animation for the Cards */
+@keyframes slideUpEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.business-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  /* Removes the underline from the link */
+  color: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* Slide in when page opens */
+  animation: slideUpEntrance 0.8s ease-out forwards;
+  opacity: 0;
+  /* Keeps them hidden before the animation fires */
+
+  /* Uses the inline style from HTML to stagger the entrance */
+  animation-delay: var(--delay);
+}
+
+/* Hover effect when user mouses over the card */
+.business-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  border-color: #bfdbfe;
+}
+
+.business-logo-wrapper {
+  width: 80px;
+  height: 80px;
+  background: #eff6ff;
+  border-radius: 20px;
+  /* Squircle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  box-shadow: inset 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.business-logo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.business-info {
+  flex-grow: 1;
+  /* Pushes the arrow to the bottom */
+  width: 100%;
+}
+
+.business-info h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.business-info p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Icons next to the text */
+.business-info i {
+  color: #2563eb;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+  background: #eff6ff;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* The interactive arrow button at the bottom right */
+.business-arrow {
+  margin-top: 25px;
+  width: 45px;
+  height: 45px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+  /* Aligns to the right */
+  font-size: 1.2rem;
+}
+
+/* Animate the arrow when hovering over the card */
+.business-card:hover .business-arrow {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* =========================================
+   RECTANGULAR "VISITING CARD" NETWORK GRID
+   ========================================= */
+.rect-network-grid {
+  display: grid;
+  /* Creates a 2-column grid of wide rectangles on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rect-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: var(--delay);
+}
+
+.rect-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  border-color: #bfdbfe;
+}
+
+/* Left Side: Brand Identity */
+.rect-brand {
+  width: 40%;
+  background: linear-gradient(135deg, #0044ff, #2563eb);
+  color: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rect-logo {
+  width: 65px;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rect-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rect-brand h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.rect-brand p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #bfdbfe;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Right Side: Contact & Badges */
+.rect-info {
+  width: 60%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.rect-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.rect-contact span {
+  font-size: 0.9rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rect-contact i {
+  color: #2563eb;
+  font-size: 1rem;
+  width: 16px;
+  text-align: center;
+}
+
+/* Brand Badges */
+.rect-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.r-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.r-badge img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Removes white backgrounds from logos */
+}
+
+/* Action Link */
+.rect-action {
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.rect-card:hover .rect-action {
+  color: #1e3a8a;
+}
+
+.rect-action i {
+  transition: transform 0.3s ease;
+}
+
+.rect-card:hover .rect-action i {
+  transform: translateX(5px);
+}
+
+/* Mobile Responsiveness - Stacks vertically on small screens */
+@media (max-width: 900px) {
+  .rect-network-grid {
+    grid-template-columns: 1fr; /* 1 column on tablets/mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .rect-card {
+    flex-direction: column; /* Stack the split design top-to-bottom on phones */
+  }
+  .rect-brand, .rect-info {
+    width: 100%;
+  }
+  .rect-brand {
+    padding: 25px 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

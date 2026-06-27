@@ -1151,6 +1151,138 @@
             color: #ffffff;
             transform: translateX(5px);
         }
+
+        /* =========================================
+   WHY CHOOSE US & ACHIEVEMENTS
+   ========================================= */
+.why-choose-us {
+  background-color: #ffffff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.why-card {
+  background: #eff6ff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #dbeafe;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.1);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.why-card h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.why-card p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.achievements-section {
+  text-align: center;
+  padding: 60px 0 0 0;
+}
+
+.achievements-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.achievements-wrapper {
+  background-color: #cfd4d9;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.achievements-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #1e5fc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: transparent;
+}
+
+.icon-circle::before {
+  content: '';
+  width: 65px;
+  height: 65px;
+  background-color: #1e5fc2;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.icon-circle i {
+  color: white;
+  font-size: 26px;
+  z-index: 2;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.achievement-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
     </style>
 </head>
 
@@ -1233,6 +1365,53 @@
                 </ul>
             </div>
 
+        </div>
+    </section>
+
+    <section class="why-choose-us section">
+        <div class="container">
+            <div class="center">
+                <h4 class="section-title">Why Choose Us</h4>
+                <h2>Your Advantage Working With Us</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Direct Wholesale Pricing</h3>
+                    <p>By eliminating middlemen, we pass the manufacturer discounts directly to you, ensuring the most
+                        competitive prices in the market.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>30+ Years of Trust</h3>
+                    <p>Three decades of hands-on industry experience means we’ve seen and solved almost every mechanical
+                        challenge possible.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3>Ready Stock Inventory</h3>
+                    <p>Our massive warehousing capacity means zero waiting time for critical spares, keeping your
+                        operations running smoothly.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>100% Genuine Guarantee</h3>
+                    <p>We strictly deal in authentic, manufacturer-certified products with full warranty coverage for
+                        your peace of mind.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Rapid Response Team</h3>
+                    <p>We know downtime costs money. Our field technicians are dispatched quickly for on-site
+                        troubleshooting and diagnostics.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Factory-Trained Experts</h3>
+                    <p>Our engineers undergo rigorous training directly from brands like KSB and Kirloskar to deliver
+                        perfect solutions.</p>
+                </div>
+            </div>
         </div>
     </section>
 
