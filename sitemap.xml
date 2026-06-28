@@ -1,7 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://selvanayakigroups.com/</loc>
-    <lastmod>2026-06-25</lastmod>
-  </url>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://selvanayakigroups.com/</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/index</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/about</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/ksb-pumps</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/kirloskar-pumps</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/tufropes</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/bharat-bijlee</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/turebore</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/gallery</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/selvanayaki-electricals</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/selvanayaki-traders</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/sabari-pumps-systems</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/bharat-pumps</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/privacy-policy</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/terms-of-service</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/gallery.html</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://selvanayakigroups.com/index.html</loc>
+  <lastmod>2026-06-28T07:48:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 </urlset>
