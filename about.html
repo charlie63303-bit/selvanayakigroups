@@ -72,22 +72,21 @@
         }
 
         /* =========================================
-           NAVIGATION BAR
-           ========================================= */
-        /* =========================================
-   UPDATED NAVIGATION BAR STYLES
+   NAVIGATION BAR (TRANSPARENT & STICKY ON SCROLL)
    ========================================= */
         .navbar {
-            position: absolute;
+            position: fixed;
+            /* Keeps navbar locked to top of screen while scrolling */
             top: 0;
             left: 0;
             width: 100%;
-            /* Dark semi-transparent background to overlay banner images */
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.45);
+            /* Dark transparent over hero header */
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             z-index: 1000;
+            transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
         .nav-container {
@@ -97,6 +96,7 @@
             align-items: center;
         }
 
+        /* Logo Section */
         .logo-section {
             display: flex;
             align-items: center;
@@ -105,31 +105,28 @@
         }
 
         .logo {
-            width: 55px;
-            height: auto;
-            border-radius: 6px;
+            width: 60px;
         }
 
         .logo-section h1 {
             color: #3b82f6;
-            /* Bright blue brand title */
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.2;
+            /* Bright blue title for dark header */
+            font-size: 24px;
+            transition: color 0.3s ease;
         }
 
         .logo-section p {
             color: #cbd5e1;
-            /* Soft light grey subtitle */
-            font-size: 13px;
-            margin: 0;
+            /* Soft grey text */
+            font-size: 14px;
+            transition: color 0.3s ease;
         }
 
+        /* Nav Links */
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
@@ -137,13 +134,11 @@
             color: #ffffff;
             /* White link text */
             font-weight: 600;
-            font-size: 16px;
             transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #60a5fa;
-            /* Light blue on hover */
         }
 
         .dropdown {
@@ -162,7 +157,6 @@
             align-items: center;
             gap: 6px;
             transition: color 0.3s ease;
-            padding: 0;
         }
 
         .dropdown:hover .dropbtn {
@@ -175,12 +169,12 @@
             top: 100%;
             left: 0;
             background-color: #ffffff;
-            min-width: 220px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+            min-width: 240px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
             z-index: 2000;
-            padding: 8px 0;
-            margin-top: 10px;
+            padding: 10px 0;
+            border: 1px solid rgba(219, 234, 254, 0.8);
         }
 
         .dropdown:hover .dropdown-content {
@@ -189,16 +183,52 @@
 
         .dropdown-content a {
             color: #1e293b;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-weight: 500;
-            font-size: 14px;
-            transition: background 0.2s ease, color 0.2s ease;
+            font-size: 15px;
+            transition: 0.2s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #eff6ff;
+            color: #2563eb;
+            padding-left: 30px;
+        }
+
+        /* =========================================
+   SCROLLED STATE (Changes to white on scroll)
+   ========================================= */
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(219, 234, 254, 0.5);
+        }
+
+        .navbar.scrolled .logo-section h1 {
+            color: #2563eb;
+        }
+
+        .navbar.scrolled .logo-section p {
+            color: #64748b;
+        }
+
+        .navbar.scrolled nav a,
+        .navbar.scrolled .dropbtn {
+            color: #1e293b;
+        }
+
+        .navbar.scrolled nav a:hover,
+        .navbar.scrolled .dropdown:hover .dropbtn {
+            color: #2563eb;
+        }
+
+        .navbar.scrolled .menu-toggle {
             color: #2563eb;
         }
 
@@ -1337,9 +1367,10 @@
 
             <nav id="nav-menu">
                 <a href="index">Home</a>
-                <a href="about">About</a>
+                <a href="about" style="color: #60a5fa;">About</a>
+
                 <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
                     <div class="dropdown-content">
                         <a href="ksb-pumps">KSB Pumps</a>
                         <a href="kirloskar-pumps">Kirloskar Pumps</a>
