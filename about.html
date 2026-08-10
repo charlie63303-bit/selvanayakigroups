@@ -74,15 +74,19 @@
         /* =========================================
            NAVIGATION BAR
            ========================================= */
+        /* =========================================
+   UPDATED NAVIGATION BAR STYLES
+   ========================================= */
         .navbar {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(219, 234, 254, 0.5);
+            /* Dark semi-transparent background to overlay banner images */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
         }
 
@@ -101,34 +105,45 @@
         }
 
         .logo {
-            width: 60px;
+            width: 55px;
+            height: auto;
+            border-radius: 6px;
         }
 
         .logo-section h1 {
-            color: #2563eb;
-            font-size: 24px;
+            color: #3b82f6;
+            /* Bright blue brand title */
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
         }
 
         .logo-section p {
-            color: #64748b;
-            font-size: 14px;
+            color: #cbd5e1;
+            /* Soft light grey subtitle */
+            font-size: 13px;
+            margin: 0;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 30px;
         }
 
         nav a {
             text-decoration: none;
-            color: #1e293b;
+            color: #ffffff;
+            /* White link text */
             font-weight: 600;
-            transition: color 0.3s;
+            font-size: 16px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #60a5fa;
+            /* Light blue on hover */
         }
 
         .dropdown {
@@ -139,18 +154,19 @@
         .dropbtn {
             background: none;
             border: none;
-            color: #1e293b;
+            color: #ffffff;
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            padding: 0;
         }
 
         .dropdown:hover .dropbtn {
-            color: #2563eb;
+            color: #60a5fa;
         }
 
         .dropdown-content {
@@ -159,12 +175,12 @@
             top: 100%;
             left: 0;
             background-color: #ffffff;
-            min-width: 240px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
             z-index: 2000;
-            padding: 10px 0;
-            border: 1px solid rgba(219, 234, 254, 0.8);
+            padding: 8px 0;
+            margin-top: 10px;
         }
 
         .dropdown:hover .dropdown-content {
@@ -173,20 +189,17 @@
 
         .dropdown-content a {
             color: #1e293b;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: block;
             font-weight: 500;
-            font-size: 15px;
-            transition: 0.2s ease;
+            font-size: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #eff6ff;
             color: #2563eb;
-            padding-left: 30px;
         }
 
         /* =========================================
@@ -1311,7 +1324,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index" class="logo-section">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="logo.png" alt="Selvanayaki Logo" class="logo">
                 <div>
                     <h1>Selvanayaki Groups</h1>
                     <p>Authorized Dealer & Service Center</p>
@@ -1324,7 +1337,7 @@
 
             <nav id="nav-menu">
                 <a href="index">Home</a>
-                <a href="about" style="color: #2563eb;">About</a>
+                <a href="about">About</a>
 
                 <div class="dropdown">
                     <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
@@ -1338,7 +1351,6 @@
                 </div>
 
                 <a href="gallery">Gallery</a>
-                <a href="index#services">Services</a>
                 <a href="index#contact">Contact</a>
             </nav>
         </div>
