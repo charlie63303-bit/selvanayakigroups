@@ -71,23 +71,27 @@
             margin: auto;
         }
 
-        /* =========================================
-           NAVIGATION BAR
-           ========================================= */
-        /* =========================================
-   UPDATED NAVIGATION BAR STYLES
-   ========================================= */
+
         .navbar {
             position: absolute;
+            /* Overlays directly on top of the hero image */
             top: 0;
             left: 0;
             width: 100%;
-            /* Dark semi-transparent background to overlay banner images */
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.45);
+            /* Dark semi-transparent background */
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Optional fixed state on scroll */
+        .navbar.scrolled {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .nav-container {
@@ -97,10 +101,11 @@
             align-items: center;
         }
 
+        /* Logo & Branding */
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             text-decoration: none;
         }
 
@@ -112,7 +117,7 @@
 
         .logo-section h1 {
             color: #3b82f6;
-            /* Bright blue brand title */
+            /* Distinct blue title */
             font-size: 22px;
             font-weight: 700;
             margin: 0;
@@ -121,11 +126,12 @@
 
         .logo-section p {
             color: #cbd5e1;
-            /* Soft light grey subtitle */
+            /* Soft grey subtitle */
             font-size: 13px;
             margin: 0;
         }
 
+        /* Nav Links */
         nav {
             display: flex;
             align-items: center;
@@ -135,7 +141,7 @@
         nav a {
             text-decoration: none;
             color: #ffffff;
-            /* White link text */
+            /* Crisp white text for dark background */
             font-weight: 600;
             font-size: 16px;
             transition: color 0.3s ease;
@@ -143,9 +149,10 @@
 
         nav a:hover {
             color: #60a5fa;
-            /* Light blue on hover */
+            /* Light blue accent on hover */
         }
 
+        /* Dropdown */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -200,6 +207,14 @@
         .dropdown-content a:hover {
             background-color: #eff6ff;
             color: #2563eb;
+        }
+
+        /* Mobile Toggle Icon */
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: #ffffff;
+            cursor: pointer;
         }
 
         /* =========================================
@@ -1324,7 +1339,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index" class="logo-section">
-                <img src="logo.png" alt="Selvanayaki Logo" class="logo">
+                <img src="logo.png" alt="Selvanayaki Groups Logo" class="logo">
                 <div>
                     <h1>Selvanayaki Groups</h1>
                     <p>Authorized Dealer & Service Center</p>
@@ -1338,9 +1353,8 @@
             <nav id="nav-menu">
                 <a href="index">Home</a>
                 <a href="about">About</a>
-
                 <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
                     <div class="dropdown-content">
                         <a href="ksb-pumps">KSB Pumps</a>
                         <a href="kirloskar-pumps">Kirloskar Pumps</a>
