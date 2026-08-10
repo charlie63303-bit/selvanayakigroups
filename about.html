@@ -71,23 +71,18 @@
             margin: auto;
         }
 
-        /* =========================================
-           NAVIGATION BAR
-           ========================================= */
-        /* =========================================
-   UPDATED NAVIGATION BAR STYLES
-   ========================================= */
-        .navbar {
-            position: absolute;
+        navbar {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            /* Dark semi-transparent background to overlay banner images */
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            /* Subtle overlay matching index hero header */
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
+            transition: all 0.3s ease-in-out;
         }
 
         .nav-container {
@@ -112,30 +107,32 @@
 
         .logo-section h1 {
             color: #3b82f6;
-            /* Bright blue brand title */
-            font-size: 22px;
+            /* Matching bright blue logo title */
+            font-size: 24px;
             font-weight: 700;
             margin: 0;
             line-height: 1.2;
+            transition: color 0.3s ease;
         }
 
         .logo-section p {
             color: #cbd5e1;
-            /* Soft light grey subtitle */
+            /* Light subtitle for transparent top state */
             font-size: 13px;
             margin: 0;
+            transition: color 0.3s ease;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
             text-decoration: none;
             color: #ffffff;
-            /* White link text */
+            /* White link text matching index page */
             font-weight: 600;
             font-size: 16px;
             transition: color 0.3s ease;
@@ -143,7 +140,6 @@
 
         nav a:hover {
             color: #60a5fa;
-            /* Light blue on hover */
         }
 
         .dropdown {
@@ -155,6 +151,7 @@
             background: none;
             border: none;
             color: #ffffff;
+            /* White button text */
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
@@ -175,11 +172,12 @@
             top: 100%;
             left: 0;
             background-color: #ffffff;
-            min-width: 220px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+            min-width: 240px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
             z-index: 2000;
-            padding: 8px 0;
+            padding: 10px 0;
+            border: 1px solid rgba(219, 234, 254, 0.8);
             margin-top: 10px;
         }
 
@@ -189,16 +187,48 @@
 
         .dropdown-content a {
             color: #1e293b;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-weight: 500;
-            font-size: 14px;
-            transition: background 0.2s ease, color 0.2s ease;
+            font-size: 15px;
+            transition: 0.2s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #eff6ff;
+            color: #2563eb;
+            padding-left: 30px;
+        }
+
+        /* =========================================
+   SCROLLED STATE (Identical to index.html)
+   ========================================= */
+        .navbar.scrolled {
+            background: #ffffff;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .navbar.scrolled .logo-section h1 {
+            color: #2563eb;
+        }
+
+        .navbar.scrolled .logo-section p {
+            color: #64748b;
+        }
+
+        .navbar.scrolled nav a,
+        .navbar.scrolled .dropbtn {
+            color: #1e293b;
+        }
+
+        .navbar.scrolled nav a:hover,
+        .navbar.scrolled .dropdown:hover .dropbtn {
             color: #2563eb;
         }
 
@@ -206,23 +236,48 @@
            PREMIUM ABOUT PAGE STYLES
            ========================================= */
         .page-header-premium {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image_0a9e65.jpg') center/cover;
-            padding: 120px 20px 80px 20px;
+            position: relative;
+            width: 100%;
+            min-height: 60vh;
+            background-image: url('image_0a9e65.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            color: white;
-            margin-top: 80px;
+            color: #ffffff;
+            padding: 100px 20px 40px 20px;
+        }
+
+        /* Single overlay matching index hero */
+        .page-header-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .page-header-premium .container {
+            position: relative;
+            z-index: 2;
         }
 
         .page-header-premium h1 {
             font-size: 3.5rem;
             margin-bottom: 15px;
             letter-spacing: 1px;
+            font-weight: 700;
         }
 
         .page-header-premium p {
             font-size: 1.2rem;
-            color: #dbeafe;
-            max-width: 600px;
+            color: #e2e8f0;
+            max-width: 650px;
             margin: 0 auto;
         }
 
@@ -1324,7 +1379,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index" class="logo-section">
-                <img src="logo.png" alt="Selvanayaki Logo" class="logo">
+                <img src="logo.png" alt="Logo" class="logo">
                 <div>
                     <h1>Selvanayaki Groups</h1>
                     <p>Authorized Dealer & Service Center</p>
@@ -1340,7 +1395,7 @@
                 <a href="about">About</a>
 
                 <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
                     <div class="dropdown-content">
                         <a href="ksb-pumps">KSB Pumps</a>
                         <a href="kirloskar-pumps">Kirloskar Pumps</a>
