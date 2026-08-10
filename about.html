@@ -9,9 +9,9 @@
     <title>About Us - Selvanayaki Groups | 30+ Years of Industrial Excellence</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Selvanayaki Groups</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="your-logo-file.png">
-
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -72,20 +72,22 @@
         }
 
         /* =========================================
-           DYNAMIC NAVBAR (TOP & SCROLL STATES)
+           NAVIGATION BAR
            ========================================= */
+        /* =========================================
+   UPDATED NAVIGATION BAR STYLES
+   ========================================= */
         .navbar {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            /* Initial Top State: Dark semi-transparent overlay */
-            background: rgba(0, 0, 0, 0);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            /* Dark semi-transparent background to overlay banner images */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
-            transition: all 0.3s ease-in-out;
         }
 
         .nav-container {
@@ -109,37 +111,39 @@
         }
 
         .logo-section h1 {
-            color: #2563eb;
-            font-size: 24px;
+            color: #3b82f6;
+            /* Bright blue brand title */
+            font-size: 22px;
             font-weight: 700;
             margin: 0;
             line-height: 1.2;
-            transition: color 0.3s ease;
         }
 
         .logo-section p {
-            color: #94a3b8;
+            color: #cbd5e1;
+            /* Soft light grey subtitle */
             font-size: 13px;
             margin: 0;
-            transition: color 0.3s ease;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 30px;
         }
 
         nav a {
             text-decoration: none;
-            color: #1e293b;
-            font-weight: 700;
+            color: #ffffff;
+            /* White link text */
+            font-weight: 600;
             font-size: 16px;
             transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #60a5fa;
+            /* Light blue on hover */
         }
 
         .dropdown {
@@ -150,8 +154,8 @@
         .dropbtn {
             background: none;
             border: none;
-            color: #1e293b;
-            font-weight: 700;
+            color: #ffffff;
+            font-weight: 600;
             font-size: 16px;
             cursor: pointer;
             display: flex;
@@ -162,7 +166,7 @@
         }
 
         .dropdown:hover .dropbtn {
-            color: #2563eb;
+            color: #60a5fa;
         }
 
         .dropdown-content {
@@ -171,12 +175,11 @@
             top: 100%;
             left: 0;
             background-color: #ffffff;
-            min-width: 240px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-            border-radius: 12px;
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
             z-index: 2000;
-            padding: 10px 0;
-            border: 1px solid rgba(219, 234, 254, 0.8);
+            padding: 8px 0;
             margin-top: 10px;
         }
 
@@ -186,48 +189,16 @@
 
         .dropdown-content a {
             color: #1e293b;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: block;
             font-weight: 500;
-            font-size: 15px;
-            transition: 0.2s ease;
+            font-size: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #eff6ff;
-            color: #2563eb;
-            padding-left: 30px;
-        }
-
-        /* =========================================
-           SCROLLED STATE (Clean White Background)
-           ========================================= */
-        .navbar.scrolled {
-            background: #ffffff;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .navbar.scrolled .logo-section h1 {
-            color: #2563eb;
-        }
-
-        .navbar.scrolled .logo-section p {
-            color: #64748b;
-        }
-
-        .navbar.scrolled nav a,
-        .navbar.scrolled .dropbtn {
-            color: #1e293b;
-        }
-
-        .navbar.scrolled nav a:hover,
-        .navbar.scrolled .dropdown:hover .dropbtn {
             color: #2563eb;
         }
 
@@ -236,9 +207,10 @@
            ========================================= */
         .page-header-premium {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image_0a9e65.jpg') center/cover;
-            padding: 160px 20px 80px 20px;
+            padding: 120px 20px 80px 20px;
             text-align: center;
             color: white;
+            margin-top: 80px;
         }
 
         .page-header-premium h1 {
@@ -666,6 +638,47 @@
             line-height: 1;
         }
 
+        /* =========================================
+           TABLET RESPONSIVE RULES (901px - 1024px)
+           ========================================= */
+        @media (max-width: 1024px) {
+            .container {
+                width: 92%;
+            }
+
+            .page-header-premium h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-premium-grid {
+                gap: 40px;
+            }
+
+            .text-content-premium h2 {
+                font-size: 2.3rem;
+            }
+
+            .vm-premium-grid {
+                gap: 20px;
+            }
+
+            .vm-card-modern {
+                padding: 45px 35px;
+            }
+
+            .milestones-grid {
+                gap: 25px;
+            }
+
+            .milestone-center-img img {
+                max-width: 190px;
+            }
+
+            .business-grid {
+                gap: 25px;
+            }
+        }
+
         @media (max-width: 900px) {
             .menu-toggle {
                 display: block;
@@ -684,7 +697,9 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #ffffff;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
                 box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
                 padding: 20px;
                 gap: 15px;
@@ -704,23 +719,602 @@
             }
 
             .page-header-premium {
-                padding: 130px 20px 60px 20px;
+                padding: 110px 20px 60px 20px;
+                margin-top: 0;
             }
 
             .page-header-premium h1 {
                 font-size: 2.2rem;
             }
 
-            .about-premium-grid,
-            .vm-premium-grid {
+            .page-header-premium p {
+                font-size: 1rem;
+            }
+
+            .about-premium-section {
+                padding: 60px 0;
+            }
+
+            .about-premium-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .image-collage {
+                padding: 0;
+            }
+
+            .img-accent {
+                display: none;
+            }
+
+            .img-main {
+                min-height: 280px;
+            }
+
+            .text-content-premium h2 {
+                font-size: 2.2rem;
+            }
+
+            .premium-list {
+                grid-template-columns: 1fr;
+            }
+
+            .businesses-section {
+                padding: 60px 0;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-mission-premium {
+                padding: 60px 0;
+            }
+
+            .vm-premium-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .vm-card-modern {
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+
+            .vm-card-modern h3 {
+                font-size: 1.8rem;
+            }
+
+            .milestones-section {
+                padding: 60px 0;
+            }
+
+            .milestones-section h2 {
+                font-size: 2.2rem;
             }
 
             .footer-top {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                text-align: left;
             }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .footer-logo-section,
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* =========================================
+           SMALL PHONE RESPONSIVE RULES (Max 480px)
+           ========================================= */
+        @media (max-width: 480px) {
+            .container {
+                width: 94%;
+            }
+
+            .logo {
+                width: 55px;
+            }
+
+            .logo-section h1 {
+                font-size: 18px;
+            }
+
+            .logo-section p {
+                font-size: 11px;
+            }
+
+            .page-header-premium {
+                padding: 100px 15px 45px 15px;
+            }
+
+            .page-header-premium h1 {
+                font-size: 1.7rem;
+            }
+
+            .page-header-premium p {
+                font-size: 0.9rem;
+            }
+
+            .text-content-premium h2 {
+                font-size: 1.7rem;
+            }
+
+            .text-content-premium h4 {
+                font-size: 0.8rem;
+            }
+
+            .vm-card-modern {
+                padding: 30px 22px;
+            }
+
+            .vm-card-modern h3 {
+                font-size: 1.5rem;
+            }
+
+            .vm-icon-modern {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                border-radius: 18px;
+            }
+
+            .milestones-section h2 {
+                font-size: 1.7rem;
+            }
+
+            .milestone-header h3 {
+                font-size: 1.4rem;
+            }
+
+            .milestone-header i {
+                font-size: 1.5rem;
+            }
+
+            .milestone-center-img img {
+                max-width: 150px;
+            }
+
+            .business-card {
+                padding: 25px 20px;
+            }
+
+            .icon-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .icon-circle::before {
+                width: 50px;
+                height: 50px;
+            }
+
+            .icon-circle i {
+                font-size: 20px;
+            }
+
+            .counter-box {
+                font-size: 1.8rem;
+            }
+
+            .achievement-item p {
+                font-size: 0.95rem;
+            }
+
+            .footer-logo {
+                width: 50px;
+            }
+
+            .footer-logo-section h2 {
+                font-size: 1.15rem;
+            }
+        }
+
+        /* =========================================
+           MILESTONES SECTION STYLES
+           ========================================= */
+        .milestones-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+
+        .section-title-pill {
+            color: #2563eb;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #eff6ff;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        .milestones-section h2 {
+            font-size: 2.8rem;
+            color: #1e293b;
+        }
+
+        .milestones-section h2 span {
+            color: #2563eb;
+        }
+
+        .milestones-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .milestone-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .milestone-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .milestone-item:last-child {
+            border-bottom: none;
+        }
+
+        .milestone-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .milestone-header i {
+            font-size: 2rem;
+            color: #3b82f6;
+            /* Blue icon to match your theme */
+        }
+
+        .milestone-header h3 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            font-weight: 800;
+        }
+
+        .milestone-item p {
+            color: #475569;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .right-align .milestone-header {
+            justify-content: flex-end;
+        }
+
+        .milestone-center-img {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+        }
+
+        .milestone-center-img img {
+            width: 100%;
+            max-width: 250px;
+            /* Adjust based on your image size */
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+            /* Adds the soft shadow from your screenshot */
+        }
+
+        /* Mobile Responsiveness for Milestones */
+        @media (max-width: 900px) {
+            .milestones-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .milestone-center-img {
+                order: -1;
+                /* Puts the image at the top on mobile */
+                margin-bottom: 20px;
+            }
+
+            .right-align {
+                text-align: left;
+            }
+
+            .right-align .milestone-header {
+                justify-content: flex-start;
+                flex-direction: row-reverse;
+                /* Keeps Icon on left, Year on Right for mobile consistency */
+            }
+        }
+
+        /* =========================================
+   BUSINESS NETWORK CARDS
+   ========================================= */
+        .businesses-section {
+            background-color: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Entrance Animation for the Cards */
+        @keyframes slideUpEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .business-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-decoration: none;
+            /* Removes the underline from the link */
+            color: #1e293b;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+
+            /* Slide in when page opens */
+            animation: slideUpEntrance 0.8s ease-out forwards;
+            opacity: 0;
+            /* Keeps them hidden before the animation fires */
+
+            /* Uses the inline style from HTML to stagger the entrance */
+            animation-delay: var(--delay);
+        }
+
+        /* Hover effect when user mouses over the card */
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            border-color: #bfdbfe;
+        }
+
+        .business-logo-wrapper {
+            width: 80px;
+            height: 80px;
+            background: #eff6ff;
+            border-radius: 20px;
+            /* Squircle shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            box-shadow: inset 0 2px 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .business-logo-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .business-info {
+            flex-grow: 1;
+            /* Pushes the arrow to the bottom */
+            width: 100%;
+        }
+
+        .business-info h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .business-info p {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Icons next to the text */
+        .business-info i {
+            color: #2563eb;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            background: #eff6ff;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        /* The interactive arrow button at the bottom right */
+        .business-arrow {
+            margin-top: 25px;
+            width: 45px;
+            height: 45px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            transition: all 0.3s ease;
+            align-self: flex-end;
+            /* Aligns to the right */
+            font-size: 1.2rem;
+        }
+
+        /* Animate the arrow when hovering over the card */
+        .business-card:hover .business-arrow {
+            background: #2563eb;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        /* =========================================
+   WHY CHOOSE US & ACHIEVEMENTS
+   ========================================= */
+        .why-choose-us {
+            background-color: #ffffff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .why-card {
+            background: #eff6ff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #dbeafe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        .why-card h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .why-card p {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .achievements-section {
+            text-align: center;
+            padding: 60px 0 0 0;
+        }
+
+        .achievements-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .achievements-wrapper {
+            background-color: #cfd4d9;
+            padding: 60px 0;
+            width: 100%;
+        }
+
+        .achievements-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .achievement-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 1px solid #1e5fc2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .icon-circle::before {
+            content: '';
+            width: 65px;
+            height: 65px;
+            background-color: #1e5fc2;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .icon-circle i {
+            color: white;
+            font-size: 26px;
+            z-index: 2;
+        }
+
+        .counter-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .achievement-item p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
         }
     </style>
 </head>
@@ -730,7 +1324,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index" class="logo-section">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="logo.png" alt="Selvanayaki Logo" class="logo">
                 <div>
                     <h1>Selvanayaki Groups</h1>
                     <p>Authorized Dealer & Service Center</p>
@@ -746,7 +1340,7 @@
                 <a href="about">About</a>
 
                 <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
                     <div class="dropdown-content">
                         <a href="ksb-pumps">KSB Pumps</a>
                         <a href="kirloskar-pumps">Kirloskar Pumps</a>
@@ -797,7 +1391,8 @@
 
                 <p>We don't just sell products; we engineer solutions. As an authorized dealer and certified service
                     center for industry giants like KSB, Kirloskar, Bharat Bijlee, Tufropes and Trubore, we ensure that
-                    your operations run seamlessly with zero downtime.</p>
+                    your operations
+                    run seamlessly with zero downtime.</p>
 
                 <ul class="premium-list">
                     <li><i class="fa-solid fa-check"></i> 100% Genuine Spares</li>
@@ -809,6 +1404,54 @@
 
         </div>
     </section>
+
+    <section class="why-choose-us section">
+        <div class="container">
+            <div class="center">
+                <h4 class="section-title">Why Choose Us</h4>
+                <h2>Your Advantage Working With Us</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Direct Wholesale Pricing</h3>
+                    <p>By eliminating middlemen, we pass the manufacturer discounts directly to you, ensuring the most
+                        competitive prices in the market.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>30+ Years of Trust</h3>
+                    <p>Three decades of hands-on industry experience means we’ve seen and solved almost every mechanical
+                        challenge possible.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3>Ready Stock Inventory</h3>
+                    <p>Our massive warehousing capacity means zero waiting time for critical spares, keeping your
+                        operations running smoothly.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>100% Genuine Guarantee</h3>
+                    <p>We strictly deal in authentic, manufacturer-certified products with full warranty coverage for
+                        your peace of mind.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Rapid Response Team</h3>
+                    <p>We know downtime costs money. Our field technicians are dispatched quickly for on-site
+                        troubleshooting and diagnostics.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Factory-Trained Experts</h3>
+                    <p>Our engineers undergo rigorous training directly from brands like KSB and Kirloskar to deliver
+                        perfect solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="vision-mission-premium">
         <div class="container">
@@ -837,6 +1480,85 @@
             </div>
         </div>
     </section>
+
+    <section class="milestones-section">
+        <div class="container">
+            <div class="center" style="text-align: center; margin-bottom: 50px;">
+                <h4 class="section-title-pill">Timeline</h4>
+                <h2>Our <span>Milestones</span></h2>
+            </div>
+
+            <div class="milestones-grid">
+                <div class="milestone-col left-col">
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>1996</h3>
+                        </div>
+                        <p>KSB Pumps (Authorized Service Center)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2006</h3>
+                        </div>
+                        <p>KSB Pumps (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2019</h3>
+                        </div>
+                        <p>Trubore (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-header">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>2020</h3>
+                        </div>
+                        <p>Tufropes (Authorized Distributor)</p>
+                    </div>
+                </div>
+
+                <div class="milestone-center-img">
+                    <img src="logo.png" alt="Submersible Pumps Timeline" />
+                </div>
+
+                <div class="milestone-col right-col">
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2021</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>New branch in pollachi</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2022</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>New branch in Dharapuram</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2023</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>Bharat Bijlee (Authorized Distributor)</p>
+                    </div>
+                    <div class="milestone-item right-align">
+                        <div class="milestone-header">
+                            <h3>2026</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <p>Kirloskar Pumps (Authorized Distributor)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <section class="achievements-section" style="padding-top: 0;">
         <div class="achievements-wrapper">
@@ -933,20 +1655,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Navbar Scroll Effect
-            const navbar = document.querySelector('.navbar');
-
-            if (navbar) {
-                window.addEventListener('scroll', () => {
-                    // Triggers scroll class when user scrolls down 40px or more
-                    if (window.scrollY > 40) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                });
-            }
-
             // Number Counter Animation
             const counters = document.querySelectorAll('.counter');
             const speed = 100;
