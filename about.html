@@ -71,6 +71,136 @@
             margin: auto;
         }
 
+        /* =========================================
+           NAVIGATION BAR
+           ========================================= */
+        /* =========================================
+   UPDATED NAVIGATION BAR STYLES
+   ========================================= */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Dark semi-transparent background to overlay banner images */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 55px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .logo-section h1 {
+            color: #3b82f6;
+            /* Bright blue brand title */
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logo-section p {
+            color: #cbd5e1;
+            /* Soft light grey subtitle */
+            font-size: 13px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            /* White link text */
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+            /* Light blue on hover */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s ease;
+            padding: 0;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: #60a5fa;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 2000;
+            padding: 8px 0;
+            margin-top: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #1e293b;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eff6ff;
+            color: #2563eb;
+        }
 
         /* =========================================
            PREMIUM ABOUT PAGE STYLES
