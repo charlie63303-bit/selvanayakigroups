@@ -80,11 +80,11 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(255, 255, 255, 0);
             /* Dark transparent over hero header */
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
             z-index: 1000;
             transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
         }
@@ -1352,39 +1352,39 @@
 <body>
 
     <header class="navbar">
-        <div class="container nav-container">
-            <a href="index" class="logo-section">
-                <img src="logo.png" alt="Logo" class="logo">
-                <div>
-                    <h1>Selvanayaki Groups</h1>
-                    <p>Authorized Dealer & Service Center</p>
-                </div>
-            </a>
+    <div class="container nav-container">
+        <a href="index" class="logo-section">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div>
+                <h1>Selvanayaki Groups</h1>
+                <p>Authorized Dealer & Service Center</p>
+            </div>
+        </a>
 
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fa-solid fa-bars"></i>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index">Home</a>
+            <a href="about" style="color: #60a5fa;">About</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="ksb-pumps">KSB Pumps</a>
+                    <a href="kirloskar-pumps">Kirloskar Pumps</a>
+                    <a href="tufropes">Tufropes</a>
+                    <a href="bharat-bijlee">Bharat Bijlee</a>
+                    <a href="Trubore">Trubore</a>
+                </div>
             </div>
 
-            <nav id="nav-menu">
-                <a href="index">Home</a>
-                <a href="about" style="color: #60a5fa;">About</a>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
-                    <div class="dropdown-content">
-                        <a href="ksb-pumps">KSB Pumps</a>
-                        <a href="kirloskar-pumps">Kirloskar Pumps</a>
-                        <a href="tufropes">Tufropes</a>
-                        <a href="bharat-bijlee">Bharat Bijlee</a>
-                        <a href="Trubore">Trubore</a>
-                    </div>
-                </div>
-
-                <a href="gallery">Gallery</a>
-                <a href="index#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+            <a href="gallery">Gallery</a>
+            <a href="index#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB6TB7TH" height="0" width="0"
