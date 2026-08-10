@@ -72,151 +72,6 @@
         }
 
 
-        .navbar {
-            position: absolute;
-            /* Overlays directly on top of the hero image */
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.45);
-            /* Dark semi-transparent background */
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Optional fixed state on scroll */
-        .navbar.scrolled {
-            position: fixed;
-            background: rgba(0, 0, 0, 0.85);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-container {
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Logo & Branding */
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo {
-            width: 55px;
-            height: auto;
-            border-radius: 6px;
-        }
-
-        .logo-section h1 {
-            color: #3b82f6;
-            /* Distinct blue title */
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .logo-section p {
-            color: #cbd5e1;
-            /* Soft grey subtitle */
-            font-size: 13px;
-            margin: 0;
-        }
-
-        /* Nav Links */
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #ffffff;
-            /* Crisp white text for dark background */
-            font-weight: 600;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #60a5fa;
-            /* Light blue accent on hover */
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropbtn {
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.3s ease;
-            padding: 0;
-        }
-
-        .dropdown:hover .dropbtn {
-            color: #60a5fa;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ffffff;
-            min-width: 220px;
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            z-index: 2000;
-            padding: 8px 0;
-            margin-top: 10px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #1e293b;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            font-weight: 500;
-            font-size: 14px;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #eff6ff;
-            color: #2563eb;
-        }
-
-        /* Mobile Toggle Icon */
-        .menu-toggle {
-            display: none;
-            font-size: 26px;
-            color: #ffffff;
-            cursor: pointer;
-        }
-
         /* =========================================
            PREMIUM ABOUT PAGE STYLES
            ========================================= */
@@ -1339,7 +1194,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index" class="logo-section">
-                <img src="logo.png" alt="Selvanayaki Groups Logo" class="logo">
+                <img src="logo.png" alt="Logo" class="logo">
                 <div>
                     <h1>Selvanayaki Groups</h1>
                     <p>Authorized Dealer & Service Center</p>
@@ -1354,7 +1209,7 @@
                 <a href="index">Home</a>
                 <a href="about">About</a>
                 <div class="dropdown">
-                    <button class="dropbtn">Products <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="dropbtn">Products <i class="fa-solid fa-angle-down"></i></button>
                     <div class="dropdown-content">
                         <a href="ksb-pumps">KSB Pumps</a>
                         <a href="kirloskar-pumps">Kirloskar Pumps</a>
